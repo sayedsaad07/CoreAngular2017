@@ -20,5 +20,14 @@ WebPack: enables ontime compile and update page by replacing code
 	Or CMD: setx ASPNETCORE_ENVIRONMENT "Development"
 	show settings: echo ASPNETCORE_ENVIRONMENT
 
-publish and release
+publish and release production version
  	dotnet public -c release
+
+Create Azure Web App
+Create GITHUB Repo
+
+	git init
+	git add README.md
+	git commit -m "first commit"
+	git remote add origin https://github.com/sayedsaad07/CoreAngular2017.git
+	git push -u origin master
