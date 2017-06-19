@@ -13,6 +13,7 @@ export class FetchDataComponent {
             this.forecasts = result.json() as WeatherForecast[];
         });
     }
+
 }
 
 interface WeatherForecast {
@@ -20,4 +21,10 @@ interface WeatherForecast {
     temperatureC: number;
     temperatureF: number;
     summary: string;
+}
+
+interface Blog {
+    BlogId: number;
+    Url: string;
+    Subject: string;
 }

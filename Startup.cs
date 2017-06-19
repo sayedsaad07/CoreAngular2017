@@ -8,6 +8,9 @@ using Microsoft.AspNetCore.SpaServices.Webpack;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using ASPCoreAngular.Model;
+using Microsoft.EntityFrameworkCore;
+
 
 namespace ASPCoreAngular
 {
@@ -28,6 +31,14 @@ namespace ASPCoreAngular
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<BloggingContext>(options 
+                => options.UseSqlServer(
+                        Configuration.GetConnectionString("DefaultConnection"))
+                    );
+            //var connection = @"Server=(localdb)\mssqllocaldb;Database=EFGetStarted.AspNetCore.NewDb;Trusted_Connection=True;";
+            //services.AddDbContext<BloggingContext>(options => options.UseSqlServer(connection));
+
+            services.AddScoped<IBloggingContextRepository , BloggingContextRepository>();
             // Add framework services.
             services.AddMvc();
         }
