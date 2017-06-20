@@ -33,7 +33,7 @@ namespace ASPCoreAngular
         {
             services.AddDbContext<BloggingContext>(options 
                 => options.UseSqlServer(
-                        Configuration.GetConnectionString("DefaultConnection"))
+                        Configuration.GetConnectionString("AzureConnectionString"))
                     );
             //var connection = @"Server=(localdb)\mssqllocaldb;Database=EFGetStarted.AspNetCore.NewDb;Trusted_Connection=True;";
             //services.AddDbContext<BloggingContext>(options => options.UseSqlServer(connection));
