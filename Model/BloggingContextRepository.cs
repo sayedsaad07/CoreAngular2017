@@ -21,13 +21,13 @@ namespace ASPCoreAngular.Model
             List<Blog_Posts> blog_postList = new List<Blog_Posts>();
             var datalist = await (from b in _context.Blogs
                                   join p in _context.Posts on b.BlogId equals p.BlogId
-                                  select new { b.BlogId, b.Url, b.Subject, p.Title, p.Content }
+                                  select new { b.BlogId, p.PostUrl, b.Subject, p.Title, p.Content }
                                   ).ToListAsync();
             datalist.ForEach(bp =>
             {
                 var newblogpost = new Blog_Posts();
                 newblogpost.BlogId = bp.BlogId;
-                newblogpost.BlogUrl = bp.Url;
+                newblogpost.PostUrl = bp.PostUrl;
                 newblogpost.BlogName = bp.Subject;
                 newblogpost.postName = bp.Title;
                 newblogpost.postContent = bp.Content;

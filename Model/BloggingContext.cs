@@ -5,9 +5,10 @@ using System.Threading.Tasks;
 
 namespace ASPCoreAngular.Model
 {
-    public class BloggingContext :DbContext
+    public class BloggingContext : DbContext
     {
-        public BloggingContext(DbContextOptions<BloggingContext> blogoption) : base(blogoption) {
+        public BloggingContext(DbContextOptions<BloggingContext> blogoption) : base(blogoption)
+        {
         }
         public DbSet<Blog> Blogs { get; set; }
         public DbSet<Post> Posts { get; set; }
@@ -25,6 +26,7 @@ namespace ASPCoreAngular.Model
     public class Post
     {
         public int PostId { get; set; }
+        public string PostUrl { get; set; }
         public string Title { get; set; }
         public string Content { get; set; }
 

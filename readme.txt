@@ -56,3 +56,5 @@ Create your database
 Once migration tools only 2 commands add migration and update database 
 			Add-Migration My_migration_version_name 
 			Update-Database 
+			Add-Migration update_post_add_post_Url
+			Update-Database 

@@ -1,7 +1,13 @@
 <h1>Sayed Saad </h1>
 <p>Here's a list of projects and ideas I'm working on </p>
 <ul>
-    <li> See My Profile page <a href="home.component.html"> </a> </li>
+
+    <li [routerLinkActive]="['link-active']">
+         See My Profile page <a [routerLink]="['/profile']"> 
+        <span class='glyphicon glyphicon-user'></span> Here </a>
+    </li>
     <li> Problem Solving </li>
-    <li> Learning SPA</li>
+    <li> Learning new frameworks and technologies </li>
+    <li> Algorithms, Design patterns, and writting a maintainable code is my passion </li>
+    <li> being an Entrepreneur is my next goal. Very intereseted in innovation and new ideas.  </li>
 </ul>

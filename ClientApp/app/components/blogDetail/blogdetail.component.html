@@ -1,7 +1,10 @@
-<h2>This is {{title}}</h2>   
+<button type="button" class="btn btn-success" [routerLinkActive]="['link-active']" [routerLink]="['/home']">
+    Home
+</button>
+<h2>{{title}}</h2>   
 <div class="row">
     <div class="col-md-12">
-        <h3>Blog List</h3>
+        <h3>Favorit posts and articles</h3>
         <br />
         <br />
         <br />
@@ -17,7 +20,7 @@
                         S.No.
                     </th>
                     <th>
-                        Blog Name
+                        Category
                     </th>
                     <th>
                         Post Name
@@ -37,10 +40,11 @@
                         {{i+1}}
                     </td>
                     <td>
-                        <a href="{{blogData.blogUrl}}"> {{blogData.blogName}}</a>
+                         {{blogData.blogName}}
                     </td>
                     <td>
-                        {{blogData.postName}}
+                        <a href="{{blogData.postUrl}}"> {{blogData.postName}}</a>
+                        
                     </td>
                     <td>
                         <P> {{blogData.postContent}} </P>

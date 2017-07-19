@@ -8,9 +8,10 @@ using ASPCoreAngular.Model;
 namespace ASPCoreAngular.Migrations
 {
     [DbContext(typeof(BloggingContext))]
-    partial class BloggingContextModelSnapshot : ModelSnapshot
+    [Migration("20170718222245_update_post_add_post_Url")]
+    partial class update_post_add_post_Url
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.2")

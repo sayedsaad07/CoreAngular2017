@@ -21,5 +21,5 @@ export class blogDetailComponent {
 
     }  
 
-    getTitle() { return 'Blog Details';}
+    getTitle() { return 'Details';}
 }

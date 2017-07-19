@@ -7,6 +7,7 @@ import { HomeComponent } from './components/home/home.component';
 import { FetchDataComponent } from './components/fetchdata/fetchdata.component';
 import { CounterComponent } from './components/counter/counter.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { ContactInfoComponent } from './components/contactinfo/contactinfo.component';
 import { blogDetailComponent } from './components/blogDetail/blogDetail.component';
 import { blogEditComponent } from './components/blogEdit/blogEdit.component';
 import { blogNewComponent } from './components/blogNew/blogNew.component';
@@ -24,6 +25,7 @@ export const sharedConfig: NgModule = {
         AppComponent,
         NavMenuComponent,
         ProfileComponent,
+        ContactInfoComponent,
         CounterComponent,
         FetchDataComponent,
         HomeComponent,
@@ -42,6 +44,7 @@ export const sharedConfig: NgModule = {
             { path: 'counter', component: CounterComponent },
             { path: 'fetch-data', component: FetchDataComponent },
             { path: 'profile', component: ProfileComponent },
+            { path: 'contact-info', component: ContactInfoComponent },
             { path: 'blog-detail', component: blogDetailComponent },
             { path: 'edit/id', component: blogEditComponent },
             { path: 'new/id', component: blogNewComponent },
